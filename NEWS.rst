@@ -12,14 +12,14 @@ Version 1.9.0 (2016-11-02)
 its next version will contain a deprecation warning and a proposal
 to use python-scrapinghub >=1.9.0 instead.
 
-Version 1.8.0 (2016-07-29)
+1.8.0 (2016-07-29)
 --------------------------
 
 - python 3 support & unittests
 - add retries on httplib.HTTPException
 - update scrapinghub api endpoint
 
-Version 1.7.0 (2014-07-25)
+v1.7.0 (2014-07-25)
 --------------------------
 
 - basic py3.3 compatibility while keeping py2.7 compatibility
