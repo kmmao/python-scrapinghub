@@ -81,6 +81,12 @@ def wrap_http_errors(method):
             elif exc._type == APIError.ERR_AUTH_ERROR:
                 raise Unauthorized(http_error=exc)
             raise ScrapinghubAPIError(msg)
+        except ValueError as exc:
+            # exception on attempt to decode wrong json in _decode_response
+            raise ScrapinghubAPIError(
+                'Wrong response format, please check parameters.\n'
+                'Original error: %s' % repr(exc)
+            )
     return wrapped
 
 
