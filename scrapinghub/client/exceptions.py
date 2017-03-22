@@ -84,9 +84,8 @@ def wrap_http_errors(method):
         except ValueError as exc:
             # exception on attempt to decode wrong json in _decode_response
             raise ScrapinghubAPIError(
-                'Wrong response format, please check parameters.\n'
-                'Original error: %s' % repr(exc)
-            )
+                "Error decoding server response ({}). Please try again later.".
+                format(str(exc)))
     return wrapped
 
 
